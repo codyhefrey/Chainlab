@@ -1,3 +1,12 @@
-# Chainlab — local integrity-chain prototype
+# Chainlab — offline tamper-evident record-chain prototype
 
-Initial repository bootstrap. This project is a local tamper-evident record chain demonstration, **not** a deployed blockchain, token, cryptocurrency or decentralized network.
+The initial working code is a small, transparent **local SHA-256-linked record chain** for testing evidence integrity. This is **not a blockchain network**, consensus protocol, cryptocurrency, token, payment system, or proof that records are objectively true. Anyone controlling all records can regenerate the hashes.
+
+```bash
+python3 chainlab.py --input demo.json
+python3 -m unittest discover -s tests -v
+```
+
+For verification, save the `blocks` array from the JSON output to a JSON file and run `python3 chainlab.py --input your-chain.json --verify`. The validator detects individual-record modification or broken hash links if a trusted root hash is retained independently. Never include passwords, private keys or sensitive user data.
+
+Roadmap (not implemented): authenticated participants, independently preserved checkpoints, key management, distributed peer-to-peer consensus, replay resistance, durable storage, governance and security reviews.
