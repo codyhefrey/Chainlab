@@ -1,0 +1,12 @@
+[
+  {
+    "event": "asset-created",
+    "asset_id": "SYNTHETIC-1",
+    "status": "draft"
+  },
+  {
+    "event": "reviewed",
+    "asset_id": "SYNTHETIC-1",
+    "status": "approved"
+  }
+]
