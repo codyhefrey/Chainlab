@@ -6,6 +6,7 @@ import sys
 import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 
 def run(*args):
     return subprocess.run([sys.executable, *args], cwd=ROOT, capture_output=True, text=True)
